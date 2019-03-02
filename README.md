@@ -40,3 +40,22 @@ Jeśli w trakcie laboratorium planujesz korzystać ze swojego laptopa, zainstalu
    * Aby zatrzymać maszynę: `vagrant halt`
    * Aby skasować maszynę: `vagrant destroy`
 
+### Badanie sieci
+
+1. W maszynie wirtualnej włącz kolejno programy: terminal (System tools -> LXTerminal), przeglądarkę (Internet -> Firefox) i program Wireshark (Internet -> Wireshark)
+2. Na ekranie startowym programu Wireshark wybierz kartę eth0. 
+3. W oknie terminala wpisz polecenie `ping -c 4 www.onet.pl` (lub inną stronę).
+4. W oknie przeglądarki otwórz stronę `stroustrup.com` (strona twórcy języka C++).
+5. Wróć do programu Wireshark i zatrzymaj rejestrację pakietów (czerwony przycisk w lewym górnym rogu).
+6. W polu filtra (pasek u góry okna Wireshark z tekstem "Apply a display filter") wpisz:
+   * `icmp` aby oberjrzeć działanie polecenia ping
+   * `dns` aby obejrzeć rozpoznawanie nazwy przez system DNS
+   * `http` aby obejrzeć dane przesyłane przez przeglądarkę 
+7. Dla wybranego pakietu protokołu HTTP obejrzyj kolejne warstwy stosu protkołów TCP/IP:
+   * fizyczną - część warstwy łącza danych
+   * MAC - część warstwy łącza danych
+   * IP - sieciową
+   * TCP - połączeniową 
+   * HTTP - aplikacji
+    Zwróć uwagę na adresy w poszczególnych warstwach (SRC i DST)
+8. Włącz na nowo rejestrację pakietów przez program Wireshark (nie musisz zapisywać starych danych). Obejrzyj dowolną witrynę WWW i prześledź w Wiresharku przesyłane dane.
