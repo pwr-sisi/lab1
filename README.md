@@ -36,7 +36,8 @@ Jeśli w trakcie laboratorium planujesz korzystać ze swojego laptopa, zainstalu
 2. Wejdź do projektu `cd lab1.git`
 3. Uruchom maszynę przy pomocy Vagranta: `vagrant up` . Jeśli wykonujesz operację po raz pierwszy, system musi pobrać obraz maszyny z Internetu co może trochę potrwać.
 4. Maszyna powinna się uruchomić. Zaloguj się do maszyny korzystając z konta vagrant z takim samym hasłem.
-5. Dodatkowe operacje (w razie potrzeby):
+5. Jeśli ekran maszyny jest za mały, otwórz panel Preferences -> Monitor Settings i zmień rozdzielczość (Resolution) na większą. Zatwierdź zmianę klikając Apply. Jeśli ekran jest nieco przesłonięty oknem VirtualBoxa popraw rozmiar naciskając PrawyCtlr-A.  
+6. Dodatkowe operacje (w razie potrzeby):
    * Aby zatrzymać maszynę: `vagrant halt`
    * Aby skasować maszynę: `vagrant destroy`
 
